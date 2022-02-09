@@ -30,6 +30,7 @@ function App() {
         setTracks(data.body.tracks.items);
       });  
     }
+    // eslint-disable-next-line
   },[searchText]);
 
   return (
