@@ -1,5 +1,53 @@
 .App{
   height: 80px;
   width: 100%;
-  background-color: blue;
+  background-color: #232323;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.RecBox{
+
+  margin: 10px;
+}
+
+.RecBtns{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  width: 250px;
+}
+
+.btn{
+  width:250px;
+  height: 30px;
+  background-color: dodgerblue;
+  border: 1px solid black;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+.btn:hover{
+  filter: brightness(1.2);
+}
+
+input[type=text]{
+  width:250px;
+  height: 30px;
+  border:2px solid #aaa;
+  border-radius:4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline:none;
+  box-sizing:border-box;
+  transition:.3s;
+}
+
+input[type=text]:focus{
+  border-color:dodgerBlue;
+  box-shadow:0 0 8px 0 dodgerBlue;
 }
