@@ -1,10 +1,9 @@
 import './App.css';
 import SpotifyPlayer from 'react-spotify-player';
 import SpotifyWebApi from 'spotify-web-api-node';
-import { useHotkeys,isHotkeyPressed} from 'react-hotkeys-hook';
+import { useHotkeys} from 'react-hotkeys-hook';
 import Modal from 'react-modal'
 import { useEffect, useState } from 'react';
-import { ModifierBitMasks } from '@blueprintjs/core/lib/esm/components/hotkeys/hotkeyParser';
 
 function App() {
   const [tracks,setTracks] = useState([])
