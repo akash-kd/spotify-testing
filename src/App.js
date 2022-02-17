@@ -21,16 +21,18 @@ function App() {
     clientSecret: 'de0201ebd0c1400894a08d4bb18621bf',
   });
 
-  let token = 'BQBzGI3PnMyQAcPgoITfq4vc-t4nzB2xAFx7s94xyopEfnIs5w09gR2SGYk01hkr_vZckJLGwc8lVgRkB-35j20B6B6CvZajTh5qKc9bR-01HvVscin2_lZKFrGag2uo5-5v1ahSTsCH5ehq20aiytXSX6al21bHU6t8XaZQIwKFnl-wYkriFhP9sQEUgDFrDeYLpwZ5cP2Ui6uB2Hfg6NIs0PQQYg'
+  let token = 'BQAAjPMb6HGtWSQb5Ff1G9jADyFEnMMXQc2nqfpVXVE2VewMUQk9sOkoRWa25uUYK4j98gsxt-oFp7A-nsyYf28WjgLumHQjYmITcxEX4yltj2RiyCBoNiETynuOZfJtdeePG-8cWi5c4gqm6oWPVtrxFEkITDWprzfDXbPRp-WAgE6cdNC_doVpaunSoLy5aA6RKqfRd9hNKRUcTvFQFOpoNWGn0A'
 
   spotifyApi.setAccessToken(token);
 
   useEffect(()=>{
     console.log(searchText)
     if(searchText.length > 1){
-      spotifyApi.searchTracks(searchText)
+
+      spotifyApi.searchAlbums(searchText)
       .then( (data) => {
-        setTracks(data.body.tracks.items);
+        console.log(data)
+        // setTracks(data.body.tracks.items);
       });  
     }
     // eslint-disable-next-line
@@ -44,8 +46,7 @@ function App() {
   return (
       <div className="App" >
         <SpotifyPlayer
-          uri={track || "spotify:track:6ozxplTAjWO0BlUxN8ia0A"}
-          size = {size}
+          uri={"spotify:track:6ozxplTAjWO0BlUxN8ia0A"}
         />
         <button onClick={()=>setModalOpen(true)}>Search or Shift + S</button>
       <Modal
